@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros — Dental Fresh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--verde-oscuro:#2F5138;--verde-principal:#5E8F6B;--verde-medio:#7CA987;--verde-claro:#BFE0C8;--verde-panel:#E9F3EB;--crema:#FBFBF9;--blanco:#FFFFFF;--texto:#22301F;--texto-suave:#5C6C58;--borde:#D9E6DA;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',sans-serif;color:var(--texto);background:var(--crema);line-height:1.55;}
+h1,h2,h3,h4,.brand{font-family:'Baloo 2',sans-serif;font-weight:700;color:var(--verde-oscuro);margin:0;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(251,251,249,0.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--borde);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:1180px;margin:0 auto;}
+.brand-group{display:flex;align-items:center;gap:12px;}
+.logo-slot{width:42px;height:42px;border-radius:10px;border:1.5px dashed var(--verde-medio);display:flex;align-items:center;justify-content:center;background:var(--verde-panel);flex-shrink:0;}
+.brand{font-size:22px;}
+.nav-links{display:flex;gap:34px;font-size:15px;font-weight:500;}
+.nav-links a:hover{color:var(--verde-principal);}
+.nav-cta{background:var(--verde-principal);color:var(--blanco);padding:10px 22px;border-radius:8px;font-weight:600;font-size:14.5px;transition:background .15s ease;}
+.nav-cta:hover{background:var(--verde-oscuro);}
+
+/* Banner (mismo panel verde del hero del index) */
+.page-banner{background:linear-gradient(160deg,var(--verde-principal) 0%,var(--verde-oscuro) 100%);color:var(--blanco);position:relative;overflow:hidden;padding:56px 0;}
+.page-banner::before{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,0.06);}
+.page-banner::after{content:"";position:absolute;left:-60px;bottom:-100px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,0.05);}
+.banner-row{position:relative;z-index:1;display:flex;align-items:center;gap:40px;}
+.hero-logo-slot{width:140px;height:140px;flex-shrink:0;border-radius:20px;border:2px dashed rgba(255,255,255,0.55);background:rgba(255,255,255,0.06);padding:10px;display:flex;align-items:center;justify-content:center;}
+.page-banner h1{color:var(--blanco);font-size:38px;line-height:1.15;}
+.page-banner .tag{margin:12px 0 0;font-size:16px;color:rgba(255,255,255,0.85);max-width:420px;}
+.page-banner .quote{margin:22px 0 0;font-size:15px;font-style:italic;color:rgba(255,255,255,0.7);border-left:2px solid rgba(255,255,255,0.4);padding-left:14px;}
+
+/* Contenido */
+section{padding:96px 0;}
+.eyebrow{font-size:14px;color:var(--verde-principal);font-weight:600;margin:0 0 14px;}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.about-visual{background:var(--verde-oscuro);border-radius:16px;padding:44px;color:var(--blanco);}
+.about-visual h3{color:var(--blanco);font-size:22px;}
+.about-visual p{color:rgba(255,255,255,0.75);font-size:14.5px;margin-top:14px;}
+.tech-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+.tech-pill{border:1px solid rgba(255,255,255,0.3);border-radius:999px;padding:7px 16px;font-size:13px;color:rgba(255,255,255,0.85);}
+.about-text h2{font-size:30px;}
+.about-text p{color:var(--texto-suave);margin-top:18px;font-size:16px;}
+.about-list{margin-top:24px;padding:0;list-style:none;}
+.about-list li{padding-left:26px;position:relative;margin-bottom:14px;font-size:15px;}
+.about-list li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border-radius:50%;background:var(--verde-principal);}
+
+/* Footer */
+footer{padding:44px 0 30px;border-top:1px solid var(--borde);}
+.footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-brand{display:flex;align-items:center;gap:10px;}
+.footer-note{font-size:13.5px;color:var(--texto-suave);margin:0;}
+
+@media (max-width:900px){
+  .banner-row{flex-direction:column;align-items:flex-start;gap:24px;}
+  .about{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand-group">
+      <div class="logo-slot"><img src="img/logo.jpeg" alt=""></div>
+      <span class="brand">Dental Fresh</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-banner">
+  <div class="wrap banner-row">
+    <div class="hero-logo-slot"><img src="img/logo.jpeg" alt="Logo de Dental Fresh"></div>
+    <div>
+      <h1>Nosotros</h1>
+      <p class="tag">Conoce la clínica y las personas detrás de tu sonrisa</p>
+      <p class="quote">"Una sonrisa fresca, todos los días."</p>
+    </div>
+  </div>
+</div>
+
+<section id="nosotros">
+  <div class="wrap about">
+    <div class="about-text">
+      <p class="eyebrow">Misión</p>
+      <h2>Salud dental cercana, para todos</h2>
+      <p>En Dental Fresh nuestra misión es brindar atención dental de calidad, cercana y accesible, cuidando la salud bucal de cada paciente con tecnología moderna, precios claros y un trato humano en cada visita.</p>
+      <ul class="about-list">
+        <li>Atención personalizada para cada paciente y cada tratamiento</li>
+        <li>Precios claros, sin sorpresas, y planes de pago flexibles</li>
+        <li>Un equipo cálido, atento a que te sientas en confianza</li>
+      </ul>
+    </div>
+    <div class="about-visual">
+      <p class="eyebrow" style="color:rgba(255,255,255,0.7);">Visión</p>
+      <h3>Ser la clínica de confianza de tu familia</h3>
+      <p>Ser la clínica dental de referencia en San Salvador, reconocida por la confianza de nuestros pacientes, la excelencia en cada tratamiento y un ambiente donde toda sonrisa es bienvenida.</p>
+      <div class="tech-row">
+        <span class="tech-pill">Confianza</span>
+        <span class="tech-pill">Calidez</span>
+        <span class="tech-pill">Excelencia</span>
+        <span class="tech-pill">Compromiso</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <div class="logo-slot"><img src="img/logo.jpeg" alt=""></div>
+      <span class="brand" style="font-size:17px;">Dental Fresh</span>
+    </div>
+    <p class="footer-note">Clínica dental en San Salvador — proyecto académico.</p>
+  </div>
+</footer>
+
+</body>
+</html>
